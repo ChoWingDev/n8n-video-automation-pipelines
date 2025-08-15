@@ -1,1 +1,0 @@
-Place your exported n8n JSON here as `salesforce_etl_pipeline_n8n.json`.

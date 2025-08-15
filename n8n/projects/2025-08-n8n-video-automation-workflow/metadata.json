@@ -1,22 +1,30 @@
 {
-  "title": "<Project Title>",
-  "slug": "<yyyy-mm-slug>",
-  "date": "YYYY-MM-DD",
-  "tags": [
-    "etl",
-    "n8n",
-    "salesforce",
-    "snowflake"
-  ],
-  "tools": [
-    "n8n",
-    "Salesforce REST API",
-    "Snowflake"
-  ],
-  "summary": "One or two sentences explaining the business problem and the outcome.",
-  "impact": {
-    "metric": "processing_time_reduction",
-    "value": 80,
-    "unit": "percent"
-  }
+    "video_subject": "{{ $json.output.title}}",
+    "video_script": "{{ $json.output.content}}",
+    "video_terms": "sport",
+    "video_aspect": "9:16",
+    "video_concat_mode": "random",
+    "video_transition_mode": "None",
+    "video_clip_duration": 3,
+    "video_count": 1,
+    "video_source": "pexels",
+    "video_materials": null,
+    "video_language": "",
+    "voice_name": "zh-CN-XiaoxiaoNeural-Female",
+    "voice_volume": 1.0,
+    "voice_rate": 1.0,
+    "bgm_type": "random",
+    "bgm_file": "",
+    "bgm_volume": 0.2,
+    "subtitle_enabled": true,
+    "subtitle_position": "bottom",
+    "custom_position": 70.0,
+    "font_name": "MicrosoftYaHeiBold.ttc",
+    "text_fore_color": "#FFFFFF",
+    "text_background_color": true,
+    "font_size": 60,
+    "stroke_color": "#000000",
+    "stroke_width": 1.5,
+    "n_threads": 2,
+    "paragraph_number": 1
 }

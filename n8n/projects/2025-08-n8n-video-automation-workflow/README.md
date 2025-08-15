@@ -1,27 +1,28 @@
-# Salesforce ETL Pipeline (n8n)
+# n8n Video Automation Workflow
 
-**Tags:** etl, automation, n8n, salesforce, snowflake  
-**Tools:** n8n, Salesforce REST API, Snowflake, Kafka (optional), Python (utilities)  
-**Timeline:** 2025-08 | **Role:** Solution Developer (POC)
+**Tags:** automation, n8n, API, video-generation  
+**Tools:** n8n, REST API, Google Gemini Chat Model 
+**Timeline:** 2025-08 
 
-## 1) What this does
-Automates extraction of objects from **Salesforce** via REST API, applies basic transforms, and loads curated data into **Snowflake**. Designed as an **n8n** workflow to demonstrate a portable, low-code ETL for CRM analytics and reporting.
+## 1) Overview
+This workflow automates the process of generating videos from input video topic using n8n.  
+It fetches content from a Google Gemin, processes it with MoneyPrinterTurbo to automatically generates video, and upload videos into YouTube with minimal manual intervention.  
 
-## 2) Key artifacts
-- `/workflow/salesforce_etl_pipeline_n8n.json` — n8n export (import in n8n → Workflows → Import)
-- `/sql/` — DDL & staging queries
-- `/screenshots/` — flow overview & node configs
+## 2) Key Features
+- Automated video generation via n8n workflow
+- API integration for data retrieval and media generation
+- Configurable parameters for different video formats and content
+- Error handling and notification system ({{ $json.data.progress }} = 100)
 
-## 3) Highlights
-- POC integrates **Salesforce migration via REST** with **Kafka-based ingestion** (optional module)
-- Modular nodes for retries, error handling, and secrets via env variables
-- Ready to extend for downstream **Tableau/Power BI**
+## 3) Workflow Diagram
+![Screenshot 2025-08-15 at 3.24.38 PM](../../../../Screenshot 2025-08-15 at 3.24.38 PM.png)
 
-## 4) How to run
-1. Import the JSON workflow into your n8n instance.  
-2. Set environment variables (SF credentials, Snowflake DSN) or n8n credentials.  
-3. Execute or schedule via n8n Cron node.
+## 4) How It Works
+1. Trigger node starts the process (manual for now)
+2. API request node fetches content/data
+3. Processing nodes prepare text, images and audio for video creation
+4. Video generation API is called
+5. download the output and upload video into YouTube
 
-## 5) Notes & next steps
-- Add incremental load (CDC) using `SystemModstamp`  
-- Add data quality checks and alerts  
+## 5) Results
+- Enabled generate video after after video topic and upload it automatically
