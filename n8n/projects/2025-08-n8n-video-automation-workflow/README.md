@@ -15,7 +15,7 @@ It fetches content from a Google Gemin, processes it with MoneyPrinterTurbo to a
 - Error handling and notification system ({{ $json.data.progress }} = 100)
 
 ## 3) Workflow Diagram
-![Screenshot 2025-08-15 at 3.24.38 PM](../../../../Screenshot 2025-08-15 at 3.24.38 PM.png)
+![workflow](../workflow.png)
 
 ## 4) How It Works
 1. Trigger node starts the process (manual for now)
