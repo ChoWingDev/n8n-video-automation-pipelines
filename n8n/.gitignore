@@ -1,0 +1,16 @@
+# General
+.DS_Store
+*.log
+__pycache__/
+.ipynb_checkpoints/
+
+# Data
+data/*
+!data/README.md
+
+# Tableau / BI cache
+*.hyper
+*.twb.tmp
+
+# VSCode
+.vscode/
